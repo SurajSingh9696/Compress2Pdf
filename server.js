@@ -13,5 +13,5 @@ exp.use(cors());
 exp.post("/compress" , upload.array("images") , compressController);
 
 exp.listen(3333 , ()=>{
-            console.log(`Server is running on http://localhost:3333`);
+            console.log(`Server is running`);
         })
