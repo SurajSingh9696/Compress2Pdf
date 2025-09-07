@@ -5,7 +5,11 @@ const { compressController } = require("./Controllers/CompressController");
 
 const exp = express();
 exp.use(express.json());
-exp.use(cors());
+exp.use(cors(
+  origin = 'https://compress2pdf.onrender.com',
+  methods = ['POST', 'GET', 'PUT', 'DELETE'],
+  credentials = true
+));
 
 // Custom middleware to handle file uploads with Busboy
 const busboyMiddleware = (req, res, next) => {
